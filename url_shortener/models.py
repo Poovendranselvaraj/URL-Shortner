@@ -13,7 +13,7 @@ class Link(db.Model):
 
     def __init__(self,**kargs):
         super().__init__(**kargs)
-        self.short_url='something'
+        self.short_url=self.generate_short_link()
 
     def generate_short_link(self):
         characters=string.digits+string.ascii_letters
